@@ -143,8 +143,12 @@ for(k = 0; k<tdn; k++){
   do_td(k); 
 }
 
+/* 
+  do stuff when mouse is over the appropriate td or th element
+  (as in adding in stuff for mouseenter, removing it for mouseleave)
+*/
 
-function do_td(i){
+function do_td(i){ // for td elements of table
   var r = Math.trunc(i/11)+1;
   var c = i%11;
   if(r>37){ 
@@ -171,7 +175,7 @@ function do_td(i){
 });  
 }
 
-function do_th(i){
+function do_th(i){ //for th elements of table
   var c = i;
   
   ths[i].addEventListener("mouseenter", () => {
